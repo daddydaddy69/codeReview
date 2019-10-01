@@ -1,19 +1,19 @@
 class LinkedListNode():
     def __init__(self,data,nextNodePointer=None): #Init method with the data and the next pointer
         self.data = data #Assigns the default variables
-        self.nextNodePointer = nextNodePointer
+        self.nextNodePointer = nextNodePointer #Sets the next node pointer to the nextnode variable if supplied
 
     def getNextNode(self): #Getter method for getting the pointer of the next node
-        return self.nextNodePointer
+        return self.nextNodePointer #returns the nextNode Pointer data structure
 
     def setNextNode(self,nodePointer): #Setter method for setting the pointer of the next node
-        self.nextNode = nodePointer
+        self.nextNode = nodePointer #Sets the next node pointer to the pointer supplied in the interface
 
     def getNodeData(self): #Getter method for getting the data associated with a node
-        return self.data
+        return self.data #Returns the data implied against that node
 
     def setNodeData(self,data): #Setter method for setting the data associated with a node
-        self.data = data
+        self.data = data #Sets the data to the parameter in the interface
 
 class LinkedList(): #LinkedList class
     def __init__(self,headPointer = None): #Headpointer set default to none
