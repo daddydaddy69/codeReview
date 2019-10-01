@@ -50,8 +50,8 @@ class priorityQueue():
 
 myQueue = priorityQueue(5)
 while True:#Repeats until the user quits
-        choice = (input("What would you like to do? \n 1. Add an item \n 2. Remove an item \n 3. Check if the queue is full \n 4. Check if the queue is empty\n 5. Display the Queue \n 6. Quit\n")) #Asks the user what they would like to do
-        if choice in ["1","2","3","4","5","6"]: #Validates the user input against the possible options
+        choice = (input("What would you like to do? \n 1. Add an item \n 2. Remove an item \n 3. Check if the queue is full \n 4. Check if the queue is empty\n 5. Display the Queue \n Any other key to quit...\n")) #Asks the user what they would like to do
+        if choice in ["1","2","3","4","5"]: #Validates the user input against the possible options
             if choice == "1":
                 chosenItem = input("Please enter the item you want to add to the queue: ")#Takes the user input and passes it as a parameter into the procedure interface
                 myQueue.enQueue(chosenItem) #Enqueues a named element and sorts the list
@@ -64,6 +64,6 @@ while True:#Repeats until the user quits
                 myQueue.isEmpty() #Checks if queue is empty
             elif choice == "5":
                 myQueue.displayQueue()
-            elif choice == "6": #If the user wants to quit
-                break #Break the infinite loop to quit the program
+         else:
+             break #Break the infinite loop to quit the program
 
