@@ -31,12 +31,17 @@ class myQueue():
             print("Queue is empty!") #Prints the relevant message to the user
         else:
             print("Queue is not empty!")#Else, queue is not empty!
-
+    
+    def printQueue(self):
+        if self.size !=0:
+            for x in range(self.startingPointer,self.startingPointer+self.size):
+                print(self.currentQueue[x])
+                
 myQueue1 = myQueue(5) #Initialises a class object with maxSize 5
 
 while True:#Repeats until the user quits
-        choice = (input("What would you like to do? \n 1. Add an item \n 2. Remove an item \n 3. Check if the queue is full \n 4. Check if the queue is empty\n 5. Quit \n")) #Asks the user what they would like to do
-        if choice in ["1","2","3","4","5"]: #Validates the user input against the possible options
+        choice = (input("What would you like to do? \n 1. Add an item \n 2. Remove an item \n 3. Check if the queue is full \n 4. Check if the queue is empty\n 5. Print the queue \n 6. Quit")) #Asks the user what they would like to do
+        if choice in ["1","2","3","4","5","6"]: #Validates the user input against the possible options
             if choice == "1": 
                 chosenItem = input("Please enter the item you want to add to the queue: ")#Takes the user input and passes it as a parameter into the procedure interface
                 myQueue1.enQueue(chosenItem)
@@ -46,7 +51,9 @@ while True:#Repeats until the user quits
                 myQueue1.isFull()#Checks if queue is full
             elif choice == "4":
                 myQueue1.isEmpty() #Checks if queue is empty
-            elif choice == "5": #If the user wants to quit
+            elif choice == "5":
+                myQueue1.printQueue()
+            elif choice == "6": #If the user wants to quit
                 break #Break the infinite loop to quit the program
 
 
